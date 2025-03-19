@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: secrets/.*\.yaml
+    pgp: EBF96430A5C289575ADFCC8F3D0FC532C1DB307B  # Reemplaza con tu ID de clave PGP

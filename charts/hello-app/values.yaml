@@ -1,0 +1,9 @@
+image:
+  repository: lhc-hello-app
+  tag: latest
+
+env:
+  ENVIRONMENT: ""
+
+secrets:
+  SECRET_VALUE: ""

@@ -1,0 +1,25 @@
+environments:
+  dev:
+    values:
+      - environments/dev.yaml
+    secrets:
+      - secrets/dev.secrets.yaml.enc
+  stage:
+    values:
+      - environments/stage.yaml
+    secrets:
+      - secrets/stage.secrets.yaml.enc
+      
+---
+
+releases:
+  - name: hello-app
+    namespace: default
+    chart: ./charts/hello-app
+    values:
+      - charts/hello-app/values.yaml
+    set:
+      - name: env.ENVIRONMENT
+        value: {{ .Environment.Values.ENVIRONMENT }}
+      - name: secrets.SECRET_VALUE
+        value: {{ .Environment.Values.SECRET_VALUE }}
