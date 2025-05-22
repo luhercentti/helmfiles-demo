@@ -1,3 +1,5 @@
+<h2><strong>Luis Angelo Hernandez Centti</strong></h2>
+
 cd nginx-custom
 docker build -t lhc-hello-app:latest .
 
